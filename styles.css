@@ -1,0 +1,126 @@
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #0e0e0e;
+    color: #33FF00;  /* لون أخضر يشبه واجهات الهاكرز */
+    line-height: 1.6;
+}
+
+/* الشريط العلوي */
+header {
+    background-color: #000;
+    color: #33FF00;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #33FF00;
+}
+
+header h1 {
+    font-size: 3em;
+}
+
+header nav ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #33FF00;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+header nav ul li a i {
+    font-size: 24px; /* حجم الأيقونة */
+    margin-right: 8px;
+}
+
+/* الأقسام */
+section {
+    padding: 40px 20px;
+    margin: 20px 0;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.5);
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* تنسيق أسفل الصفحة */
+footer {
+    text-align: center;
+    background-color: #000;
+    color: #33FF00;
+    padding: 10px;
+    margin-top: 30px;
+    position: relative;
+    height: 150px;  /* ارتفاع الفوتر */
+}
+
+footer p {
+    font-size: 1.1em;
+}
+
+/* تخصيص صور الفوتر */
+.footer-images {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.footer-image {
+    width: 50px;  /* حجم الصور */
+    height: auto;
+    margin: 0 15px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer-image:hover {
+    opacity: 1;
+}
+
+/* استجابة للموبايل */
+@media screen and (max-width: 600px) {
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .footer-images {
+        flex-direction: column;
+    }
+
+    .footer-image {
+        margin: 10px 0;
+        width: 40px;
+    }
+}
